@@ -28,6 +28,6 @@ def search_page():
 @main_blueprint.route('/users/<username>', methods=['GET'])
 def user_page(username):
     user_posts = posts.get_posts_by_username(username)
-    return render_template('user-feed.html', post=user_posts, username=username)
+    return render_template('user-feed.html', posts=user_posts, username=username)
 
 
